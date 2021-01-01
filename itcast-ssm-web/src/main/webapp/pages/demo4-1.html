@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <!-- 页面meta -->
@@ -130,7 +131,8 @@ le devices -->
 </span>
                 </a>
                     <ul class="treeview-menu">
-                        <li id="system-setting"><a href="../user/findAll.do"> <i
+                        <li id="system-setting"><a
+                                href="../user/findAll.do"> <i
                                 class="fa fa-circle-o"></i> 用户管理
                         </a></li>
                         <li id="system-setting"><a href="../role/findAll.do">
@@ -139,7 +141,8 @@ le devices -->
                         <li id="system-setting"><a href="../permission/findAll.do">
                             <i class="fa fa-circle-o"></i> 资源权限管理
                         </a></li>
-                        <li id="system-setting"><a href="../sysLog/findAll.do"> <i
+                        <li id="system-setting"><a
+                                href="../sysLog/findAll.do"> <i
                                 class="fa fa-circle-o"></i> 访问日志
                         </a></li>
                     </ul></li>
@@ -149,10 +152,12 @@ le devices -->
 </span>
                 </a>
                     <ul class="treeview-menu">
-                        <li id="system-setting"><a href="../product/findAll.do">
+                        <li id="system-setting"><a
+                                href="../product/findAll.do">
                             <i class="fa fa-circle-o"></i> 产品管理
                         </a></li>
-                        <li id="system-setting"><a href="../order/findAll.do?page=1&pageSize=3">
+                        <li id="system-setting"><a
+                                href="../order/findAll.do?page=1&pageSize=3">
                             <i class="fa fa-circle-o"></i> 订单管理
                         </a></li>
                     </ul></li>
@@ -190,7 +195,8 @@ le devices -->
                         <div class="pull-left">
                             <div class="form-group form-inline">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建" onclick="window.open('all-admin-management-roles-createbuilt.html')">
+                                    <button type="button" class="btn btn-default" t
+                                            itle="新建" onclick="location.href='../pages/role-add.jsp'">
                                         <i class="fa fa-file-o"></i> 新建
                                     </button>
                                     <button type="button" class="btn btn-default" t
@@ -333,7 +339,9 @@ ission.do?id=3" class="btn bg-olive btn-xs">添加权限</a>
 <script src="../plugins/daterangepicker/daterangepicker.zh-CN.js"></script>
 <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
 <script  src="../plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
-<script src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script
+        src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></scri
+    pt>
     <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <script src="../plugins/fastclick/fastclick.js"></script>
 <script src="../plugins/iCheck/icheck.min.js"></script>
@@ -389,7 +397,8 @@ ission.do?id=3" class="btn bg-olive btn-xs">添加权限</a>
                 $("#dataList td input[type='checkbox']")
                     .iCheck(
                         {
-                            checkboxClass : 'icheckbox_square-blue',
+                            checkboxClass : 'icheckbox_square-b
+                            lue',
                             increaseArea : '20%'
                         });
 // 全选操作
@@ -400,12 +409,14 @@ ission.do?id=3" class="btn bg-olive btn-xs">添加权限</a>
                                 ':checked');
                             if (!clicks) {
                                 $(
-                                    "#dataList td input[type='checkbox']")
+                                    "#dataList td input[typ
+                                e='checkbox']")
                                     .iCheck(
                                         "uncheck");
                             } else {
                                 $(
-                                    "#dataList td input[type='checkbox']")
+                                    "#dataList td input[typ
+                                e='checkbox']")
                                     .iCheck("check");
                             }
                             $(this).data("clicks",

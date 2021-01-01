@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/ht
-ml4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <!-- 页面meta -->
@@ -63,8 +62,10 @@ ml4/loose.dtd">
     <!-- 页面头部 -->
     <header class="main-header">
         <!-- Logo -->
-        <a href="all-admin-index.html" class="logo"> <!-- mini logo for sidebar mini 50x50pixels -->
-            <span class="logo-mini"><b>数据</b></span> <!-- logo for regular state and mobile devices -->
+        <a href="all-admin-index.html" class="logo"> <!-- mini logo for sidebar mini 50x50
+pixels -->
+            <span class="logo-mini"><b>数据</b></span> <!-- logo for regular state and mobi
+le devices -->
             <span class="logo-lg"><b>数据</b>后台管理</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
@@ -134,7 +135,8 @@ ml4/loose.dtd">
 </span>
                 </a>
                     <ul class="treeview-menu">
-                        <li id="system-setting"><a href="../user/findAll.do"> <i
+                        <li id="system-setting"><a
+                                href="../user/findAll.do"> <i
                                 class="fa fa-circle-o"></i> 用户管理
                         </a></li>
                         <li id="system-setting"><a href="../role/findAll.do">
@@ -143,20 +145,23 @@ ml4/loose.dtd">
                         <li id="system-setting"><a href="../permission/findAll.do">
                             <i class="fa fa-circle-o"></i> 资源权限管理
                         </a></li>
-                        <li id="system-setting"><a href="../sysLog/findAll.do"> <i
+                        <li id="system-setting"><a
+                                href="../sysLog/findAll.do"> <i
                                 class="fa fa-circle-o"></i> 访问日志
                         </a></li>
                     </ul></li>
                 <li class="treeview"><a href="#"> <i class="fa fa-cube"></i>
                     <span>基础数据</span> <span class="pull-right-container"> <i
                             class="fa fa-angle-left pull-right"></i>
-                     </span>
+</span>
                 </a>
                     <ul class="treeview-menu">
-                        <li id="system-setting"><a href="../product/findAll.do">
+                        <li id="system-setting"><a
+                                href="../product/findAll.do">
                             <i class="fa fa-circle-o"></i> 产品管理
                         </a></li>
-                        <li id="system-setting"><a href="../order/findAll.do?page=1&pageSize=3">
+                        <li id="system-setting"><a
+                                href="../order/findAll.do?page=1&pageSize=3">
                             <i class="fa fa-circle-o"></i> 订单管理
                         </a></li>
                     </ul></li>
@@ -170,51 +175,36 @@ ml4/loose.dtd">
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                用户管理 <small>添加角色表单</small>
+                权限资源管理 <small>权限资源表单</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="../index.jsp"><i
                         class="fa fa-dashboard"></i> 首页</a></li>
-                <li><a
-                        href="../user/findAll.do">用户管理</a></li>
-                <li class="active">添加角色表单</li>
+                <li><a href="../permission/findAll.do">权限资源管理</a></li>
+                <li class="active">权限资源表单</li>
             </ol>
         </section>
         <!-- 内容头部 /-->
-        <form
-                action="../user/addRoleToUser.do"
-                method="post">
+        <form action="../permission/save.do"
+              method="post">
             <!-- 正文区域 -->
-            <section class="content"> <input type="hidden" name="userId"
-                                             value="1">
-                <table id="dataList"
-                       class="table table-bordered table-striped table-hover dataTable">
-                    <thead>
-                    <tr>
-                        <th class="" style="padding-right: 0px">
-                            <input id="selall" type="checkbox" class="icheckbox_square-blue"></th>
-                        <th class="sorting_asc">ID</th>
-                        <th class="sorting">角色名称</th>
-                        <th class="sorting">角色描述</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><input name="ids" type="checkbox" value="2">
-                        </td>
-                        <td>2</td>
-                        <td>user</td>
-                        <td>普通用户</td>
-                    </tr>
-                    <tr>
-                        <td><input name="ids" type="checkbox" value="3">
-                        </td>
-                        <td>3</td>
-                        <td>guest</td>
-                        <td>测试帐号</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <section class="content"> <!--产品信息-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">权限资源信息</div>
+                    <div class="row data-type">
+                        <div class="col-md-2 title">权限资源名称</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="permissionName
+"
+                                   placeholder="权限资源名称" value="">
+                        </div>
+                        <div class="col-md-2 title">权限资源URL</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="url"
+                                   placeholder="url" value="">
+                        </div>
+                    </div>
+                </div>
                 <!--订单信息/--> <!--工具栏-->
                 <div class="box-tools text-center">
                     <button type="submit" class="btn bg-maroon">保存</button>
@@ -319,7 +309,8 @@ ml4/loose.dtd">
         src="../plugins/ionslider/ion.rangeSlider.min.js"></script>
 <script
         src="../plugins/bootstrap-slider/bootstrap-slider.js"></script>
-<script src="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script
+        src="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
     <script>
         $(document).ready(function() {
         // 选择框
@@ -328,27 +319,15 @@ ml4/loose.dtd">
         $(".textarea").wysihtml5({
         locale : 'zh-CN'
         });
-        // 全选操作
-        $("#selall").click(function() {
-        var clicks = $(this).is(':checked');
-        if (!clicks) {
-            $("#dataList td input[type='checkbox']").iCheck("uncheck");
-        } else {
-            $("#dataList td input[type='checkbox']").iCheck("check");
-        }
-            $(this).data("clicks", !clicks);
-        });
         });
         // 设置激活菜单
         function setSidebarActive(tagUri) {
-            var liObj = $("#" + tagUri);
-            if (liObj.length > 0) {
-                liObj.parent().parent().addClass("active");
-                liObj.addClass("active");
-            }
+        var liObj = $("#" + tagUri);
+        if (liObj.length > 0) {
+        liObj.parent().parent().addClass("active");
+        liObj.addClass("active");
+        }
         }
     </script>
-</body>
-</html>
-
-
+    </body>
+    </html>
