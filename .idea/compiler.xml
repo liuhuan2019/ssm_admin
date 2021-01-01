@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="itcast-ssm-domain" />
         <module name="itcast-ssm-utils" />
         <module name="itcast-ssm-service" />
-        <module name="itcast-ssm-web" />
+        <module name="itcast-ssm-domain" />
         <module name="itcast-ssm-dao" />
+        <module name="itcast-ssm-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
     <!-- 页面meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,9 +76,7 @@ le devices -->
                     <li class="dropdown user user-menu"><a href="#"
                                                            class="dropdown-toggle" data-toggle="dropdown"> <img
                             src="../img/user2-160x160.jpg"
-                            class="user-image" alt="User Image"> <span class="hidden-xs">
-tom
-</span>
+                            class="user-image" alt="User Image"> <span class="hidden-xs">&#26446;&#22235;</span>
                     </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -118,7 +113,7 @@ tom
                 </div>
                 <div class="pull-left info">
                     <p>
-                        tom
+                        &#26446;&#22235;
                     </p>
                     <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
                 </div>
@@ -135,18 +130,16 @@ tom
 </span>
                 </a>
                     <ul class="treeview-menu">
-                        <li id="system-setting"><a
-                                href="../user/findAll.do"> <i
+                        <li id="system-setting"><a href="../user/findAll.do"> <i
                                 class="fa fa-circle-o"></i> 用户管理
                         </a></li>
-                        <li id="system-setting"><a href="all-admin-rolelist.html">
+                        <li id="system-setting"><a href="../role/findAll.do">
                             <i class="fa fa-circle-o"></i> 角色管理
                         </a></li>
-                        <li id="system-setting"><a href="all-admin-resourceslist.html">
+                        <li id="system-setting"><a href="../permission/findAll.do">
                             <i class="fa fa-circle-o"></i> 资源权限管理
                         </a></li>
-                        <li id="system-setting"><a
-                                href="../sysLog/findAll.do"> <i
+                        <li id="system-setting"><a href="../sysLog/findAll.do"> <i
                                 class="fa fa-circle-o"></i> 访问日志
                         </a></li>
                     </ul></li>
@@ -156,12 +149,10 @@ tom
 </span>
                 </a>
                     <ul class="treeview-menu">
-                        <li id="system-setting"><a
-                                href="../product/findAll.do">
+                        <li id="system-setting"><a href="../product/findAll.do">
                             <i class="fa fa-circle-o"></i> 产品管理
                         </a></li>
-                        <li id="system-setting"><a
-                                href="../order/findAll.do?page=1&pageSize=3">
+                        <li id="system-setting"><a href="../order/findAll.do?page=1&pageSize=3">
                             <i class="fa fa-circle-o"></i> 订单管理
                         </a></li>
                     </ul></li>
@@ -175,14 +166,14 @@ tom
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                用户管理 <small>全部用户</small>
+                角色管理 <small>全部角色</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="../index.jsp"><i
                         class="fa fa-dashboard"></i> 首页</a></li>
                 <li><a
-                        href="../user/findAll.do">用户管理</a></li>
-                <li class="active">全部用户</li>
+                        href="../role/findAll.do">角色管理</a></li>
+                <li class="active">全部角色</li>
             </ol>
         </section>
         <!-- 内容头部 /-->
@@ -199,10 +190,11 @@ tom
                         <div class="pull-left">
                             <div class="form-group form-inline">
                                 <div class="btn-group">
-                                    <button type="button" onclick="newbuilt()" class="btn btn-default" title="新建">
+                                    <button type="button" class="btn btn-default" title="新建" onclick="window.open('all-admin-management-roles-createbuilt.html')">
                                         <i class="fa fa-file-o"></i> 新建
                                     </button>
-                                    <button type="button" class="btn btn-default" t itle="刷新">
+                                    <button type="button" class="btn btn-default" t
+                                            itle="刷新">
                                         <i class="fa fa-refresh"></i> 刷新
                                     </button>
                                 </div>
@@ -227,12 +219,8 @@ ataTable">
 x_square-blue">
                                 </th>
                                 <th class="sorting_asc">ID</th>
-                                <th class="sorting_desc">用户名</th>
-                                <th class="sorting_asc sorting_asc_disabled">邮箱
-                                </th>
-                                <th class="sorting_desc sorting_desc_disabled">
-                                    联系电话</th>
-                                <th class="sorting">状态</th>
+                                <th class="sorting_desc">角色名称</th>
+                                <th class="sorting">角色描述</th>
                                 <th class="text-center">操作</th>
                             </tr>
                             </thead>
@@ -240,13 +228,31 @@ x_square-blue">
                             <tr>
                                 <td><input name="ids" type="checkbox"></td>
                                 <td>1</td>
-                                <td>tom</td>
-                                <td>tom@itcast.cn</td>
-                                <td>12345678900</td>
-                                <td>启用</td>
+                                <td>admin</td>
+                                <td>管理员权限</td>
                                 <td class="text-center">
-                                    <a href="all-admin-register-detail.html" class
-                                            ="btn bg-olive btn-xs">详情</a>
+                                    <a href="../role/findRoleByIdAndAllPerm
+ission.do?id=1" class="btn bg-olive btn-xs">添加权限</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input name="ids" type="checkbox"></td>
+                                <td>2</td>
+                                <td>user</td>
+                                <td>普通用户</td>
+                                <td class="text-center">
+                                    <a href="../role/findRoleByIdAndAllPerm
+ission.do?id=2" class="btn bg-olive btn-xs">添加权限</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input name="ids" type="checkbox"></td>
+                                <td>3</td>
+                                <td>guest</td>
+                                <td>测试帐号</td>
+                                <td class="text-center">
+                                    <a href="../role/findRoleByIdAndAllPerm
+ission.do?id=3" class="btn bg-olive btn-xs">添加权限</a>
                                 </td>
                             </tr>
                             </tbody>
@@ -326,7 +332,7 @@ x_square-blue">
 <script src="../plugins/daterangepicker/daterangepicker.js"></script>
 <script src="../plugins/daterangepicker/daterangepicker.zh-CN.js"></script>
 <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
-<script src="../plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script  src="../plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
 <script src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
     <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <script src="../plugins/fastclick/fastclick.js"></script>
@@ -335,9 +341,12 @@ x_square-blue">
 <script src="../plugins/treeTable/jquery.treetable.js"></script>
 <script src="../plugins/select2/select2.full.min.js"></script>
 <script src="../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
-<script src="../plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.zh-CN.js"></script>
+<script
+        src="../plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.zh-CN.js"></script>
 <script src="../plugins/bootstrap-markdown/js/bootstrap-markdown.js"></script>
-<script src="../plugins/bootstrap-markdown/locale/bootstrap-markdown.zh.js"></script>
+<script
+        src="../plugins/bootstrap-markdown/locale/bootstrap-markdown.zh.js"></script
+>
 <script src="../plugins/bootstrap-markdown/js/markdown.js"></script>
 <script src="../plugins/bootstrap-markdown/js/to-markdown.js"></script>
 <script src="../plugins/ckeditor/ckeditor.js"></script>
@@ -403,9 +412,7 @@ x_square-blue">
                                 !clicks);
                         });
             });
-    function newbuilt() {
-        window.open("all-admin-createuser.html")
-    }
 </script>
 </body>
 </html>
+

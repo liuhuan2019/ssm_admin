@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/ht
+ml4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
     <!-- 页面meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,7 +79,7 @@ le devices -->
                                                            class="dropdown-toggle" data-toggle="dropdown"> <img
                             src="../img/user2-160x160.jpg"
                             class="user-image" alt="User Image"> <span class="hidden-xs">
-tom
+&#26446;&#22235;
 </span>
                     </a>
                         <ul class="dropdown-menu">
@@ -118,7 +117,7 @@ tom
                 </div>
                 <div class="pull-left info">
                     <p>
-                        tom
+                        &#26446;&#22235;
                     </p>
                     <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
                 </div>
@@ -135,18 +134,16 @@ tom
 </span>
                 </a>
                     <ul class="treeview-menu">
-                        <li id="system-setting"><a
-                                href="../user/findAll.do"> <i
+                        <li id="system-setting"><a href="../user/findAll.do"> <i
                                 class="fa fa-circle-o"></i> 用户管理
                         </a></li>
-                        <li id="system-setting"><a href="all-admin-rolelist.html">
+                        <li id="system-setting"><a href="../role/findAll.do">
                             <i class="fa fa-circle-o"></i> 角色管理
                         </a></li>
-                        <li id="system-setting"><a href="all-admin-resourceslist.html">
+                        <li id="system-setting"><a href="../permission/findAll.do">
                             <i class="fa fa-circle-o"></i> 资源权限管理
                         </a></li>
-                        <li id="system-setting"><a
-                                href="../sysLog/findAll.do"> <i
+                        <li id="system-setting"><a href="../sysLog/findAll.do"> <i
                                 class="fa fa-circle-o"></i> 访问日志
                         </a></li>
                     </ul></li>
@@ -156,12 +153,10 @@ tom
 </span>
                 </a>
                     <ul class="treeview-menu">
-                        <li id="system-setting"><a
-                                href="../product/findAll.do">
+                        <li id="system-setting"><a href="../product/findAll.do">
                             <i class="fa fa-circle-o"></i> 产品管理
                         </a></li>
-                        <li id="system-setting"><a
-                                href="../order/findAll.do?page=1&pageSize=3">
+                        <li id="system-setting"><a href="../order/findAll.do?page=1&pageSize=3">
                             <i class="fa fa-circle-o"></i> 订单管理
                         </a></li>
                     </ul></li>
@@ -199,10 +194,12 @@ tom
                         <div class="pull-left">
                             <div class="form-group form-inline">
                                 <div class="btn-group">
-                                    <button type="button" onclick="newbuilt()" class="btn btn-default" title="新建">
+                                    <button type="button" onclick="newBuilt()" class="btn btn-default" title=
+                                            "新建">
                                         <i class="fa fa-file-o"></i> 新建
                                     </button>
-                                    <button type="button" class="btn btn-default" t itle="刷新">
+                                    <button type="button" class="btn btn-default" title=
+                                            "刷新">
                                         <i class="fa fa-refresh"></i> 刷新
                                     </button>
                                 </div>
@@ -212,55 +209,40 @@ tom
                             <div class="has-feedback">
                                 <input type="text" class="form-control input-sm"
                                        placeholder="搜索"> <span
-                                    class="glyphicon glyphicon-search form-controlfeedback"></span>
+                                    class="glyphicon glyphicon-search form-control-feed
+back"></span>
                             </div>
                         </div>
                         <!--工具栏/-->
                         <!--数据列表-->
-                        <table id="dataList"
-                               class="table table-bordered table-striped table-hover d
-ataTable">
-                            <thead>
-                            <tr>
-                                <th class="" style="padding-right: 0px"><input
-                                        id="selall" type="checkbox" class="icheckbo
-x_square-blue">
-                                </th>
-                                <th class="sorting_asc">ID</th>
-                                <th class="sorting_desc">用户名</th>
-                                <th class="sorting_asc sorting_asc_disabled">邮箱
-                                </th>
-                                <th class="sorting_desc sorting_desc_disabled">
-                                    联系电话</th>
-                                <th class="sorting">状态</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><input name="ids" type="checkbox"></td>
-                                <td>1</td>
-                                <td>tom</td>
-                                <td>tom@itcast.cn</td>
-                                <td>12345678900</td>
-                                <td>启用</td>
-                                <td class="text-center">
-                                    <a href="all-admin-register-detail.html" class
-                                            ="btn bg-olive btn-xs">详情</a>
-                                </td>
-                            </tr>
-                            </tbody>
-                            <!--
-                            <tfoot>
-                            <tr>
-                            <th>Rendering engine</th>
-                            <th>Browser</th>
-                            <th>Platform(s)</th>
-                            <th>Engine version</th>
-                            <th>CSS grade</th>
-                            </tr>
-                            </tfoot>-->
-                        </table>
+                        <div class="tab-pane" id="tab-treetable">
+                            <table id="collapse-table"
+                                   class="table table-bordered table-hover dataTable">
+                                <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>描述</th>
+                                </tr>
+                                </thead>
+                                <tr data-tt-id="0">
+                                    <td colspan="2">tom</td>
+                                </tr>
+                                <tbody>
+                                <tr data-tt-id="1" data-tt-parent-id="0">
+                                    <td>admin</td>
+                                    <td>管理员权限</td>
+                                </tr>
+                                <tr data-tt-id="1-1" data-tt-parent-id="1">
+                                    <td>产品修改</td>
+                                    <td>/product/update.do</td>
+                                </tr>
+                                <tr data-tt-id="1-1" data-tt-parent-id="1">
+                                    <td>产品详情</td>
+                                    <td>/product/findById.do</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <!--数据列表/-->
                     </div>
                     <!-- 数据表格 /-->
@@ -305,8 +287,7 @@ x_square-blue">
         <div class="pull-right hidden-xs">
             <b>Version</b> 1.0.8
         </div>
-        <strong>Copyright &copy; 2014-2017 <a
-                href="http://www.itcast.cn">研究院研发部</a>.
+        <strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">研究院研发部</a>.
         </strong> All rights reserved. </footer>
     <!-- 底部导航 /-->
 </div>
@@ -326,24 +307,27 @@ x_square-blue">
 <script src="../plugins/daterangepicker/daterangepicker.js"></script>
 <script src="../plugins/daterangepicker/daterangepicker.zh-CN.js"></script>
 <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
-<script src="../plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
-<script src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-    <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="../plugins/fastclick/fastclick.js"></script>
+<script
+        src="../plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script
+        src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../plugins/fastclick/fastclick.js"></script>
 <script src="../plugins/iCheck/icheck.min.js"></script>
 <script src="../plugins/adminLTE/js/app.min.js"></script>
 <script src="../plugins/treeTable/jquery.treetable.js"></script>
 <script src="../plugins/select2/select2.full.min.js"></script>
 <script src="../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
-<script src="../plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.zh-CN.js"></script>
+<script
+        src="../plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.zh-CN.js"></script>
 <script src="../plugins/bootstrap-markdown/js/bootstrap-markdown.js"></script>
-<script src="../plugins/bootstrap-markdown/locale/bootstrap-markdown.zh.js"></script>
+<script
+        src="../plugins/bootstrap-markdown/locale/bootstrap-markdown.zh.js"></script>
 <script src="../plugins/bootstrap-markdown/js/markdown.js"></script>
 <script src="../plugins/bootstrap-markdown/js/to-markdown.js"></script>
 <script src="../plugins/ckeditor/ckeditor.js"></script>
 <script src="../plugins/input-mask/jquery.inputmask.js"></script>
-<script
-        src="../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="../plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
@@ -362,6 +346,9 @@ x_square-blue">
         $(".textarea").wysihtml5({
             locale : 'zh-CN'
         });
+        $("#collapse-table").treetable({
+            expandable : true
+        });
     });
     // 设置激活菜单
     function setSidebarActive(tagUri) {
@@ -371,39 +358,27 @@ x_square-blue">
             liObj.addClass("active");
         }
     }
-    $(document)
-        .ready(
-            function() {
+    $(document).ready(function() {
 // 激活导航位置
-                setSidebarActive("admin-datalist");
+        setSidebarActive("admin-datalist");
 // 列表按钮
-                $("#dataList td input[type='checkbox']")
-                    .iCheck(
-                        {
-                            checkboxClass : 'icheckbox_square-blue',
-                            increaseArea : '20%'
-                        });
+        $("#dataList td input[type='checkbox']").iCheck({
+            checkboxClass : 'icheckbox_square-blue',
+            increaseArea : '20%'
+        });
 // 全选操作
-                $("#selall")
-                    .click(
-                        function() {
-                            var clicks = $(this).is(
-                                ':checked');
-                            if (!clicks) {
-                                $(
-                                    "#dataList td input[type='checkbox']")
-                                    .iCheck(
-                                        "uncheck");
-                            } else {
-                                $(
-                                    "#dataList td input[type='checkbox']")
-                                    .iCheck("check");
-                            }
-                            $(this).data("clicks",
-                                !clicks);
-                        });
-            });
-    function newbuilt() {
+        $("#selall").click(function() {
+            var clicks = $(this).is(':checked');
+            if (!clicks) {
+                $("#dataList td input[type='checkbox']").iCheck("uncheck");
+            } else {
+                $("#dataList td input[type='checkbox']").iCheck("check");
+            }
+            $(this).data("clicks", !clicks);
+        });
+    });
+
+    function newBuilt() {
         window.open("all-admin-createuser.html")
     }
 </script>
