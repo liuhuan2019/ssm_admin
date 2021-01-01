@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9b153008-3d79-4d45-a393-9229e1058d4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo4-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo5-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo5-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo6-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo6-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo6-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo6-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo7-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo7-2.heml.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/all-admin-management-roles-createbuilt.html" beforeDir="false" afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo4-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/all-admin-management-roles.html" beforeDir="false" afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo4-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/all-admin-resource-authentication.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/all-admin-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/all-admin-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo4-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/all-admin-management-roles-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo4-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/all-admin-management-roles-builteroles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo4-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/all-admin-management-roles-resources-Authorization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/demo5-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/itcast-ssm-web/src/main/webapp/pages/all-admin-Authorization-index.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,14 +45,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1mKvJ1DSKRYw56TIge2Hmwjvqnt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,26 +65,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\idea project\ssm_admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\java\ssm_admin\itcast-ssm-web\src\main\webapp\pages" />
       <recent name="E:\idea project\ssm_admin\itcast-ssm-web\src\main\webapp\pages" />
       <recent name="E:\idea project\ssm_admin\itcast-ssm-web\src\main\webapp" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\idea project\ssm_admin" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -115,13 +107,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="页面修改第一次提交" />
