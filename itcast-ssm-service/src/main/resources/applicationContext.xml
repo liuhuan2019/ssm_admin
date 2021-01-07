@@ -20,7 +20,32 @@
     <context:component-scan base-package="com.lh.service"></context:component-scan>
     <context:component-scan base-package="com.lh.dao"></context:component-scan>
 
-    <bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
+    <context:property-placeholder location="classpath:db.properties"/>
+    <bean id="dataSources" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}" />
+        <property name="jdbcUrl" value="${jdbc.url}" />
+        <property name="user" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
     </bean>
+
+    <!-- 把交给IOC管理 SqlSessionFactory -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSources" />
+    </bean>
+
+    <!-- 扫描dao接口 -->
+    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.lh.dao"/>
+    </bean>
+
+    <!-- 配置Spring的声明式事务管理 -->
+    <!-- 配置事务管理器 -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSources"/>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+
+
 </beans>
