@@ -53,6 +53,8 @@
           href="../plugins/ionslider/ion.rangeSlider.skinNice.css">
     <link rel="stylesheet"
           href="../plugins/bootstrap-slider/slider.css">
+    <link rel="stylesheet"
+          href="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -164,14 +166,14 @@ mobile devices -->
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                订单管理 <small>全部订单</small>
+                产品管理 <small>全部产品</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="../index.jsp"><i
                         class="fa fa-dashboard"></i> 首页</a></li>
                 <li><a
-                        href="../order/findAll.do">订单管理</a></li>
-                <li class="active">全部订单</li>
+                        href="../product/findAll.do">产品管理</a></li>
+                <li class="active">全部产品</li>
             </ol>
         </section>
         <!-- 内容头部 /-->
@@ -190,15 +192,14 @@ mobile devices -->
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default" title=
                                             "新建"
-                                            onclick='location.href="all-order-manage-edit.html"'>
+                                            onclick=window.open('all-admin-product-built-product.html')>
                                         <i class="fa fa-file-o"></i> 新建
                                     </button>
-                                    <button type="button" class="btn btn-default" title=
-                                            "删除"
-                                            onclick='confirm("你确认要删除吗？")'>
+                                    <button type="button" class="btn btn-default" title="删除" onclick='confirm("你确认要删除吗？")'>
                                         <i class="fa fa-trash-o"></i> 删除
                                     </button>
-                                    <button type="button" class="btn btn-default" title="开启"
+                                    <button type="button" class="btn btn-default" title=
+                                            "开启"
                                             onclick='confirm("你确认要开启吗？")'>
                                         <i class="fa fa-check"></i> 开启
                                     </button>
@@ -219,27 +220,25 @@ mobile devices -->
                             <div class="has-feedback">
                                 <input type="text" class="form-control input-sm"
                                        placeholder="搜索"> <span
-                                    class="glyphicon glyphicon-search form-control-feed
-back"></span>
+                                    class="glyphicon glyphicon-search form-control-feedback"></span>
                             </div>
                         </div>
                         <!--工具栏/-->
                         <!--数据列表-->
                         <table id="dataList"
-                               class="table table-bordered table-striped table-hover dataT
-able">
+                               class="table table-bordered table-striped table-hover dataTable">
                             <thead>
                             <tr>
-                                <th class="" style="padding-right: 0px"><input id="
-selall"
+                                <th class="" style="padding-right: 0px"><input id="selall"
                                                                                type="checkbox" class="icheckbox_square-blue"></
                                 th>
                                 <th class="sorting_asc">ID</th>
-                                <th class="sorting">订单编号</th>
-                                <th class="sorting">名称</th>
-                                <th class="sorting">金额</th>
-                                <th class="sorting">下单时间</th>
-                                <th class="sorting">订单状态</th>
+                                <th class="sorting">产品编号</th>
+                                <th class="sorting">产品名称</th>
+                                <th class="sorting">出发城市</th>
+                                <th class="sorting">出发时间</th>
+                                <th class="sorting">产品价格</th>
+                                <th class="sorting">产品状态</th>
                                 <th class="text-center">操作</th>
                             </tr>
                             </thead>
@@ -247,46 +246,33 @@ selall"
                             <tr>
                                 <td><input name="ids" type="checkbox"></td>
                                 <td>1</td>
-                                <td>12345</td>
+                                <td>itcast-001</td>
                                 <td>广州五日游</td>
-                                <td>￥850.0</td>
-                                <td>2018-03-02 00:00:00</td>
-                                <td>已支付</td>
-                                <td class="text-center"><a class="btn bg-olive
-btn-xs"
-                                                           href='all-order-manage-details.html'>详情</a>
-                                    <a class="btn bg-olive btn-xs"
-                                       href='../order/deleteById.do?id=1'>删除</a>
+                                <td>￥广州</td>
+                                <td>2018-03-30 19:00:00</td>
+                                <td>850.0</td>
+                                <td>关闭</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn bg-olive btn-xs"
+                                            onclick=window.open('all-admin-product-details.html')>详情</button>
+                                    <button type="button" class="btn bg-olive btn-xs"
+                                            onclick=window.open('all-admin-product-index.html')>编辑</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td><input name="ids" type="checkbox"></td>
                                 <td>2</td>
-                                <td>54321</td>
+                                <td>itcast-002</td>
                                 <td>北京三日游</td>
-                                <td>￥350.0</td>
-                                <td>2018-03-02 00:00:00</td>
-                                <td>已支付</td>
-                                <td class="text-center"><a class="btn bg-olive
-btn-xs"
-                                                           href='all-order-manage-details.html'>详情</a>
-                                    <a class="btn bg-olive btn-xs"
-                                       href='../order/deleteById.do?id=2'>删除</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><input name="ids" type="checkbox"></td>
-                                <td>3</td>
-                                <td>67890</td>
-                                <td>北京三日游</td>
-                                <td>￥350.0</td>
-                                <td>2018-03-02 00:00:00</td>
-                                <td>已支付</td>
-                                <td class="text-center"><a class="btn bg-olive
-btn-xs"
-                                                           href='all-order-manage-details.html'>详情</a>
-                                    <a class="btn bg-olive btn-xs"
-                                       href='../order/deleteById.do?id=3'>删除</a>
+                                <td>￥北京</td>
+                                <td>2018-03-28 00:00:00</td>
+                                <td>350.0</td>
+                                <td>开启</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn bg-olive btn-xs"
+                                            onclick=window.open('all-admin-product-details.html')>详情</button>
+                                    <button type="button" class="btn bg-olive btn-xs"
+                                            onclick=window.open('all-admin-product-index.html')>编辑</button>
                                 </td>
                             </tr>
                             </tbody>
@@ -298,7 +284,8 @@ btn-xs"
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default" title=
                                             "新建"
-                                            onclick='location.href="all-order-manage-edit.html"'>
+                                            onclick='location.href="all-order-manage-edit.h
+tml"'>
                                         <i class="fa fa-file-o"></i> 新建
                                     </button>
                                     <button type="button" class="btn btn-default" title=
@@ -328,7 +315,8 @@ btn-xs"
                             <div class="has-feedback">
                                 <input type="text" class="form-control input-sm"
                                        placeholder="搜索"> <span
-                                    class="glyphicon glyphicon-search form-control-feedback"></span>
+                                    class="glyphicon glyphicon-search form-control-feed
+back"></span>
                             </div>
                         </div>
                         <!--工具栏/-->
@@ -340,35 +328,26 @@ btn-xs"
                 <div class="box-footer">
                     <div class="pull-left">
                         <div class="form-group form-inline">
-                            总共2 页，共4 条数据。 每页 <select
-                                class="form-control" onchange="getPageSize()" id="pageSizeSelect">
-                            <option value="1">请选择</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="10">10</option>
+                            总共2 页，共14 条数据。 每页 <select class="form-control">
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>80</option>
                         </select> 条
                         </div>
                     </div>
                     <div class="box-tools pull-right">
                         <ul class="pagination">
-                            <li><a
-                                    href="../order/findAll.do?page=1&pageSize=3"
-                                    aria-label="Previous">首页</a></li>
-                            <li><a
-                                    href="../order/findAll.do?page=0&pageSize=3">上一页</a>
-                            </li>
-                            <li><a
-                                    href="../order/findAll.do?page=1&pageSize=3">1</a></
-                            li>
-                            <li><a
-                                    href="../order/findAll.do?page=2&pageSize=3">2</a></li>
-                            <li><a
-                                    href="../order/findAll.do?page=2&pageSize=3">下一页</a>
-                            </li>
-                            <li><a
-                                    href="../order/findAll.do?page=2&pageSize=3"
-                                    aria-label="Next">尾页</a></li>
+                            <li><a href="#" aria-label="Previous">首页</a></li>
+                            <li><a href="#">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">下一页</a></li>
+                            <li><a href="#" aria-label="Next">尾页</a></li>
                         </ul>
                     </div>
                 </div>
@@ -388,8 +367,7 @@ btn-xs"
         </strong> All rights reserved. </footer>
     <!-- 底部导航 /-->
 </div>
-<script
-        src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
 <script
         src="../plugins/jQueryUI/jquery-ui.min.js"></script>
 <script>
@@ -471,52 +449,47 @@ btn-xs"
         src="../plugins/ionslider/ion.rangeSlider.min.js"></script>
 <script
         src="../plugins/bootstrap-slider/bootstrap-slider.js"></script>
-<script>
-    $(document).ready(function() {
-    // 选择框
+<script
+        src="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        // 选择框
         $(".select2").select2();
-// WYSIHTML5编辑器
+        // WYSIHTML5编辑器
         $(".textarea").wysihtml5({
-            locale : 'zh-CN'
+        locale : 'zh-CN'
         });
-    });
-    // 设置激活菜单
-    function setSidebarActive(tagUri) {
+        });
+        // 设置激活菜单
+        function setSidebarActive(tagUri) {
         var liObj = $("#" + tagUri);
         if (liObj.length > 0) {
-            liObj.parent().parent().addClass("active");
-            liObj.addClass("active");
+        liObj.parent().parent().addClass("active");
+        liObj.addClass("active");
         }
-    }
-    $(document).ready(function() {
-// 激活导航位置
+        }
+        $(document).ready(function() {
+        // 激活导航位置
         setSidebarActive("order-manage");
-// 列表按钮
+        // 列表按钮
         $("#dataList td input[type='checkbox']").iCheck({
-            checkboxClass : 'icheckbox_square-blue',
-            increaseArea : '20%'
+        checkboxClass : 'icheckbox_square-blue',
+        increaseArea : '20%'
         });
-// 全选操作
+        // 全选操作
         $("#selall").click(function() {
-            var clicks = $(this).is(':checked');
-            if (!clicks) {
-                $("#dataList td input[type='checkbox']").iCheck("uncheck");
-            } else {
-                $("#dataList td input[type='checkbox']").iCheck("check");
-            }
-            $(this).data("clicks", !clicks);
+        var clicks = $(this).is(':checked');
+        if (!clicks) {
+        $("#dataList td input[type='checkbox']").iCheck("uncheck");
+        } else {
+        $("#dataList td input[type='checkbox']").iCheck("check");
+        }
+        $(this).data("clicks", !clicks);
         });
-    });
-    function getPageSize() {
-        var pageSize = $("#pageSizeSelect").val();
-        location.href = "../order/findAll.do?page=1&pageSize="
-            + pageSize;
-    }
-</script>
-</body>
-</html>
-
-
+        });
+    </script>
+    </body>
+    </html>
 
 
 
